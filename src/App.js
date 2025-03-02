@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function App() {
   const [st1,setSt1] = useState();
+  const [st2,setSt2] = useState(false);
   let count4 = 0;
 
   function task1() {
@@ -12,7 +13,7 @@ function App() {
      
   }
   function task2() {
-
+          setSt2(true);
   }
   function task3() {
 
@@ -49,7 +50,7 @@ function App() {
       </section>
       <section>
         <h2>Task 2</h2>
-        <div className="task-2"></div>
+        <div className={`task2 ${st2? "active" : ""}`}  onMouseEnter={task2} ></div>
       </section>
       <section>
         <h2>Task 3</h2>
