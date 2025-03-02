@@ -8,6 +8,8 @@ function App() {
   const [st2,setSt2] = useState(false);
   const [st3,setSt3] = useState('')
   const [st4,setSt4] = useState(0);
+  const [st5,setSt5] = useState(0);
+  
   let count4 = 0;
 
   function task1() {
@@ -25,8 +27,10 @@ function App() {
      console.log(count4++);
      
   }
-  function task5() {
-
+  function task5(e) {
+      setSt5(e.target.checked ? e.target.value : 0);
+      console.log(e);
+      
   }
   function task6() {
 
@@ -66,8 +70,8 @@ function App() {
       </section>
       <section>
         <h2>Task 5</h2>
-        <input type="checkbox" currentValue="55" />
-        <div className="out-5"></div>
+        <input type="checkbox" value='55' onChange={task5} />
+        <div className="out-5"  > {st5} </div>
       </section>
       <section>
         <h2>Task 6</h2>
