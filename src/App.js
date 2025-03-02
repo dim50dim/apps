@@ -6,6 +6,7 @@ import { useState } from 'react';
 function App() {
   const [st1,setSt1] = useState();
   const [st2,setSt2] = useState(false);
+  const [st3,setSt3] = useState('')
   let count4 = 0;
 
   function task1() {
@@ -13,10 +14,11 @@ function App() {
      
   }
   function task2() {
-          setSt2(true);
+     
   }
-  function task3() {
-
+  function task3(e) {
+      console.log(e.target.value);
+      
   }
   function task4() {
 
@@ -54,7 +56,7 @@ function App() {
       </section>
       <section>
         <h2>Task 3</h2>
-        <input type="text" className="task-3" />
+        <input type="text" className="task-3" onChange={task3} />
       </section>
       <section>
         <h2>Task 4</h2>
