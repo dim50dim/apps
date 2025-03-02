@@ -50,7 +50,7 @@ function App() {
       </section>
       <section>
         <h2>Task 2</h2>
-        <div className={`task2 ${st2? "active" : ""}`}  onMouseEnter={task2} ></div>
+        <div className='task-2'   onMouseEnter={task2} ></div>
       </section>
       <section>
         <h2>Task 3</h2>
