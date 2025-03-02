@@ -9,6 +9,7 @@ function App() {
   const [st3,setSt3] = useState('')
   const [st4,setSt4] = useState(0);
   const [st5,setSt5] = useState(0);
+  const [st6,setSt6] = useState();
   
   let count4 = 0;
 
@@ -32,8 +33,8 @@ function App() {
       console.log(e);
       
   }
-  function task6() {
-
+  function task6(e) {
+    setSt6(e.target.value)
   }
   function task7() {
 
@@ -75,12 +76,14 @@ function App() {
       </section>
       <section>
         <h2>Task 6</h2>
-        <select className="task-6">
+        <select className="task-6" onChange={task6} >
           <option value="7">seven</option>
           <option value="4">four</option>
           <option value="9">nine</option>
           <option value="10">ten</option>
+   
         </select>
+        <div className="out-6"> {st6} </div>
       </section>
       <section>
         <h2>Task 7</h2>
