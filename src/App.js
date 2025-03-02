@@ -8,7 +8,8 @@ function App() {
   let count4 = 0;
 
   function task1() {
-        
+     console.log('task11111111111');
+     
   }
   function task2() {
 
@@ -44,7 +45,7 @@ function App() {
       <h1>События</h1>
       <section>
         <h2>Task 1</h2>
-        <button className="task-1">Push</button>
+        <button className="task-1" onClick={task1} >Push</button>
       </section>
       <section>
         <h2>Task 2</h2>
