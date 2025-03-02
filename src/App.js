@@ -11,8 +11,8 @@ function App() {
   const [st5,setSt5] = useState(0);
   const [st6,setSt6] = useState();
   const [st9,setSt9] = useState(0);
-  
-  let count4 = 0;
+  const [st10,setSt10] = useState([])
+   let count4 = 0;
 
   function task1() {
      console.log('task11111111111');
@@ -48,7 +48,8 @@ function App() {
   }
   let ar10 = [5, 6, 7];
   function task10() {
-
+     const input = document.querySelector('.i-10').value;
+     if(input) setSt10(item => [...item,setSt10]);
   }
 
   return (
@@ -103,8 +104,9 @@ function App() {
       </section>
       <section>
         <h2>Task 10</h2>
-        <input type="number" className="i-10"></input>
-        <button className="task-10">Push</button>
+        <input type="number" className="i-10"onClick={task10}  ></input>
+        <button className="task-10"  >Push</button>
+        <div className="out-10"> {st10} </div>
       </section>
     </>
   );
