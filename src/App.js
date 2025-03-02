@@ -7,6 +7,7 @@ function App() {
   const [st1,setSt1] = useState();
   const [st2,setSt2] = useState(false);
   const [st3,setSt3] = useState('')
+  const [st4,setSt4] = useState(0);
   let count4 = 0;
 
   function task1() {
@@ -21,7 +22,8 @@ function App() {
       
   }
   function task4() {
-
+     console.log(count4++);
+     
   }
   function task5() {
 
@@ -60,7 +62,7 @@ function App() {
       </section>
       <section>
         <h2>Task 4</h2>
-        <button className="task-4">Count</button>
+        <button className="task-4" onClick={task4} >Count</button>
       </section>
       <section>
         <h2>Task 5</h2>
