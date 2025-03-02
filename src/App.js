@@ -10,6 +10,7 @@ function App() {
   const [st4,setSt4] = useState(0);
   const [st5,setSt5] = useState(0);
   const [st6,setSt6] = useState();
+  const [st9,setSt9] = useState(0);
   
   let count4 = 0;
 
@@ -42,8 +43,8 @@ function App() {
   function task8() {
 
   }
-  function task9() {
-
+  function task9(e) {
+     setSt9(e.target.value)
   }
   let ar10 = [5, 6, 7];
   function task10() {
@@ -97,8 +98,8 @@ function App() {
       </section>
       <section>
         <h2>Task 9</h2>
-        <input type="range" className="task-9"></input>
-        <div className="out-9"></div>
+        <input type="range" className="task-9" onChange={task9} ></input>
+        <div className="out-9"> {st9} </div>
       </section>
       <section>
         <h2>Task 10</h2>
