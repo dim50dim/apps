@@ -2,14 +2,18 @@ import React from "react";
 
 class Test extends React.Component{
     constructor() {
+        console.clear();
+        console.log('constructor');
+        
         super();
         this.state = {
             s1 : 0,
         }
     }
     buttonHandler = () => {
-        console.log('buttonHandler - worked');
-        
+        let val = this.state.s1;
+        val++;
+        this.setState({s1 : val})
     }
 
      render() {
