@@ -17,6 +17,11 @@ class Test extends React.Component{
         this.setState({s1 : val})
     }
 
+    static getDeriveStatePromProps(props,state){
+               console.log('get derive state prom');
+                  return ({'s1' : props.arg})
+    }
+
      render() {
  console.log('render-1');
  
