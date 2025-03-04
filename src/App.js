@@ -4,38 +4,27 @@ import { useState } from 'react';
 
 
 function App() {
-  const [st1,setSt1] = useState();
-  const [st2,setSt2] = useState(false);
-  const [st3,setSt3] = useState('')
-  const [st4,setSt4] = useState(0);
-  const [st5,setSt5] = useState(0);
-  const [st6,setSt6] = useState();
-  const [st9,setSt9] = useState(0);
-  const [st10,setSt10] = useState([])
-   let count4 = 0;
+const [st2,setSt2] = useState('');
+  let count4 = 0;
 
   function task1() {
-     console.log('task11111111111');
-     
+         console.log('task1')
+         
   }
   function task2() {
-     
+      setSt2('active')
   }
-  function task3(e) {
-      console.log(e.target.value);
-      
+  function task3() {
+
   }
   function task4() {
-     console.log(count4++);
-     
+
   }
-  function task5(e) {
-      setSt5(e.target.checked ? e.target.value : 0);
-      console.log(e);
-      
+  function task5() {
+
   }
-  function task6(e) {
-    setSt6(e.target.value)
+  function task6() {
+
   }
   function task7() {
 
@@ -43,13 +32,12 @@ function App() {
   function task8() {
 
   }
-  function task9(e) {
-     setSt9(e.target.value)
+  function task9() {
+
   }
   let ar10 = [5, 6, 7];
   function task10() {
-     const input = document.querySelector('.i-10').value;
-     if(input) setSt10(item => [...item,setSt10]);
+
   }
 
   return (
@@ -61,31 +49,29 @@ function App() {
       </section>
       <section>
         <h2>Task 2</h2>
-        <div className='task-2'   onMouseEnter={task2} ></div>
+        <div className="task-2" onMouseEnter={task2} ></div>
       </section>
       <section>
         <h2>Task 3</h2>
-        <input type="text" className="task-3" onChange={task3} />
+        <input type="text" className="task-3" />
       </section>
       <section>
         <h2>Task 4</h2>
-        <button className="task-4" onClick={task4} >Count</button>
+        <button className="task-4">Count</button>
       </section>
       <section>
         <h2>Task 5</h2>
-        <input type="checkbox" value='55' onChange={task5} />
-        <div className="out-5"  > {st5} </div>
+        <input type="checkbox" currentValue="55" />
+        <div className="out-5"></div>
       </section>
       <section>
         <h2>Task 6</h2>
-        <select className="task-6" onChange={task6} >
+        <select className="task-6">
           <option value="7">seven</option>
           <option value="4">four</option>
           <option value="9">nine</option>
           <option value="10">ten</option>
-   
         </select>
-        <div className="out-6"> {st6} </div>
       </section>
       <section>
         <h2>Task 7</h2>
@@ -99,14 +85,13 @@ function App() {
       </section>
       <section>
         <h2>Task 9</h2>
-        <input type="range" className="task-9" onChange={task9} ></input>
-        <div className="out-9"> {st9} </div>
+        <input type="range" className="task-9"></input>
+        <div className="out-9"></div>
       </section>
       <section>
         <h2>Task 10</h2>
-        <input type="number" className="i-10"onClick={task10}  ></input>
-        <button className="task-10"  >Push</button>
-        <div className="out-10"> {st10} </div>
+        <input type="number" className="i-10"></input>
+        <button className="task-10">Push</button>
       </section>
     </>
   );
