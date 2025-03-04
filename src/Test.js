@@ -1,7 +1,12 @@
 import React from "react";
 
 class Test extends React.Component{
-    
+    constructor() {
+        super();
+        this.state = {
+            s1 : 0,
+        }
+    }
     buttonHandler = () => {
         console.log('buttonHandler - worked');
         
@@ -12,6 +17,7 @@ class Test extends React.Component{
  
     return (
         <div>
+            {/* {console.log('render-2')} */}
             <div>
                 <button onClick={this.buttonHandler} > Push</button>
             </div>
@@ -19,3 +25,5 @@ class Test extends React.Component{
     )
      }
 }
+
+export default Test;
