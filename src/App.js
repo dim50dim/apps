@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { useState } from 'react';
-import Homework1 from './Homework1';
+// import Homework1 from './Homework1';
 
 function App() {
 const [st2,setSt2] = useState(false);
@@ -51,7 +51,7 @@ const [st10,setSt10] = useState([]);
 
   return (
     <>
-    <Homework1 />
+    {/* <Homework1 /> */}
       <h1>События</h1>
       <section>
         <h2>Task 1</h2>
