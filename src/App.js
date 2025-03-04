@@ -52,7 +52,7 @@ const [st10,setSt10] = useState([]);
 
   return (
     <>
-    <Test />
+    <Test arg= {77}/>
     {/* <Homework1 /> */}
       <h1>События</h1>
       <section>
