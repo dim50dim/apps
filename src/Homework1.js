@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 class Homework1 extends React.Component{
@@ -5,7 +6,7 @@ class Homework1 extends React.Component{
         super(props);
     }
     render() {
-        return <h2> hi there {this.props.model} </h2>
+        return <h2> hi there {this.props} </h2>
     }
 }
 
